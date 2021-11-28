@@ -1,9 +1,11 @@
 import { Module } from '@nestjs/common';
-import { AppGetaway } from './app.getaway';
+import { AlertController } from './alert/alert.controller';
+import { AlertGeteway } from './alert/alert.geteway';
+import { ChatGateway } from './chat/chat.geteway';
 
 @Module({
   imports: [],
-  controllers: [],
-  providers: [AppGetaway],
+  controllers: [AlertController],
+  providers: [ChatGateway, AlertGeteway],
 })
 export class AppModule {}
